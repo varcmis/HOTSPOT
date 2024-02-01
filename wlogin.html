@@ -1,14 +1,22 @@
 <!doctype html>
 <html lang="en">
 
-<head onload="doLogin();">
+<head>
     <meta charset="utf-8">
     <meta http-equiv="pragma" content="no-cache" />
     <meta http-equiv="expires" content="-1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Internet hotspot - Log in</title>
     <link rel="stylesheet" href="css/style.css">
+</head>
 
+<body onload="doLogin()">
+    <!-- two other colors
+
+    <body class="lite">
+    <body class="dark">
+
+    -->
     <script type="text/javascript">
         function doLogin() {
             document.sendin.username.value = document.login.username.value = 'userhotspot';
@@ -25,16 +33,6 @@
             <input type="hidden" name="popup" value="true" />
         </form>
     </script>
-
-</head>
-
-<body">
-    <!-- two other colors
-
-    <body class="lite">
-    <body class="dark">
-
-    -->
 
     $(if chap-id)
 
