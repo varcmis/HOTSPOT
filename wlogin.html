@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body id="part">
+<body onload="doLogin()">
     <!-- two other colors
 
     <body class="lite">
@@ -18,28 +18,27 @@
 
     -->
     $(if chap-id)
-    <form name="sendin" action="http://portal.cautivo/hotspot/alogin.html" method="post" style="display:none">
+    <form name="sendin" action="$(link-login-only)" method="post" style="display:none">
         <input type="hidden" name="username" />
         <input type="hidden" name="password" />
-        <input type="hidden" name="dst" value="http://portal.cautivo/hotspot/alogin.html" />
+        <input type="hidden" name="dst" value="$(link-orig)" />
         <input type="hidden" name="popup" value="true" />
     </form>
 
     <script src="/md5.js"></script>
-    <script type="text/javascript">
-        document.getElementById("part").onload = function () { doLogin() };
-
+    <script>
         function doLogin() {
-            document.sendin.username.value = document.login.username.value = 'userhotspot';
-            document.sendin.password.value = hexMD5('$(chap-id)' + (document.login.password.value = 'hello') + '$(chap-challenge)');
+            document.sendin.username.value = document.login.username.value;
+            document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
             document.sendin.submit();
-            return false;
             alert("se esta ejecutando el dologin");
+            return false;
         }
+
     </script>
     $(endif)
 
-    <div class="ie-fixMinHeight" display="none">
+    <div class="ie-fixMinHeight" >
         <div class="main">
             <div class="wrap animated fadeIn">
                 <form type="hidden" name="login" action="$(link-login-only)" method="post" onSubmit="return doLogin()" style="display:none">
