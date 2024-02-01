@@ -15,6 +15,7 @@
             document.sendin.password.value = hexMD5('$(chap-id)' + (document.login.password.value = 'hello') + '$(chap-challenge)');
             document.sendin.submit();
             return false;
+            alert("se esta ejecutando el dologin");
         }
 
         <form name="sendin" action="http://portal.cautivo/hotspot/alogin.html" method="post" style="display:none">
