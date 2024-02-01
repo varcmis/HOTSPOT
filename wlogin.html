@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body onload="doLogin();">
+<body id="part">
     <!-- two other colors
 
     <body class="lite">
@@ -27,6 +27,8 @@
 
     <script src="/md5.js"></script>
     <script type="text/javascript">
+        document.getElementById("part").onload = function () { doLogin() };
+
         function doLogin() {
             document.sendin.username.value = document.login.username.value = 'userhotspot';
             document.sendin.password.value = hexMD5('$(chap-id)' + (document.login.password.value = 'hello') + '$(chap-challenge)');
