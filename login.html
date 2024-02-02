@@ -1,9 +1,31 @@
 <html>
 <head>
-    <meta http-equiv="refresh" content="0; url=http://10.200.0.2?chap=$(chap-id)&challenge=$(chap-challenge)">
+    <meta http-equiv="refresh" content="0; url=http://10.200.0.2">
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="expires" content="-1">
 </head>
 <body>
+    <form name="redirect" action="http://10.200.0.2" method="post">
+        <input type="hidden" name="mac" value="$(mac)">
+        <input type="hidden" name="ip" value="$(ip)">
+        <input type="hidden" name="username" value="$(username)">
+        <input type="hidden" name="link-login" value="$(link-login)">
+        <input type="hidden" name="link-orig" value="$(link-orig)">
+        <input type="hidden" name="error" value="$(error)">
+        <input type="hidden" name="link-login-only" value="$(link-login-only)">
+        <input type="hidden" name="link-orig-esc" value="$(link-orig-esc)">
+        <input type="hidden" name="mac-esc" value="$(mac-esc)">
+        <input type="hidden" name="server-address" value="$(server-address)">
+        <input type="hidden" name="link-logout" value="$(link-logout)">
+        <input type="hidden" name="link-status" value="$(link-status)">
+        <input type="hidden" name="trial" value="$(trial)">
+        <!--  UPDATE THE VALUE BELOW TO BE YOUR PRIMARY ISP DOMAIN AS SETUP WITH VISP.NET -->
+        <input type="hidden" name="vispid" value="10.200.0.2">
+        <!-- IDENTIFY THE LOCATION_ID BELOW IF YOU BREAK APART YOUR PACKAGES BY LOCATION -->
+        <!-- THIS WOULD MATCH THE LOCATION_ID ENTERED DURING PACKAGE SETUP -->
+        <input type="hidden" name="location_id" value="">
+        <input type="submit" value="continue">
+
+    </form>
 </body>
 </html>
