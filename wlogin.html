@@ -2,9 +2,12 @@
 <head>
     <script src="/md5.js"></script>
     <script>
-        window.onload = function() {
+        
+        window.onload = function () {
+            var chapip = document.getElementsByName("redirect")[2].value;
             var pass = hexMD5('$(chap-id)' + 'hello' + '$(chap-challenge)');
             document.head.querySelector('meta[name="bypass"]').content = "0; url=login?username=userhotspot&password=" + pass + "";
+            alert('ël chap id es:'+ chapip);
         }
     </script>
     <meta http-equiv="refresh" name="bypass" content="">
