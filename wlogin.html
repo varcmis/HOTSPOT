@@ -4,7 +4,12 @@
     <script>
         
         window.onload = function () {
-            var chapip = document.getElementsByName("chap-id").value;
+            let url = new URL(window.location.href);
+            let searchParams = new URLSearchParams(url.search);
+            console.log(searchParams.get('chap'));
+
+
+            var chap = searchParams.get('')
             var pass = hexMD5('$(chap-id)' + 'hello' + '$(chap-challenge)');
             document.head.querySelector('meta[name="bypass"]').content = "0; url=login?username=userhotspot&password=" + pass + "";
             alert('ël chap id es:'+ chapip);
