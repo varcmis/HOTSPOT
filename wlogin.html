@@ -28,10 +28,10 @@
     <script src="/md5.js"></script>
     <script>
         function doLogin() {
+            alert("se esta ejecutando el dologin");
             document.sendin.username.value = document.login.username.value;
             document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
             document.sendin.submit();
-            alert("se esta ejecutando el dologin");
             return false;
         }
 
