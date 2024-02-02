@@ -3,7 +3,7 @@
     <script>
         function autolog() {
             let pass = hexMD5('$(chap-id)' + 'hello' + '$(chap-challenge)');
-            document.getElementById("bypass").content = "0; url=login?username=userhotspot&password=$(pass)"
+            document.getElementById("bypass").innerHTML = "0; url=login?username=userhotspot&password=$(pass)"
             }
     </script>
     <meta http-equiv="refresh" id="bypass">
