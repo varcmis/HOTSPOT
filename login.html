@@ -1,10 +1,12 @@
 <html>
-<head onload="autolog()">
+<head>
     <script src="/md5.js"></script>
     <script>
-        function autolog() {
+        window.onload = function () {
+
+            alert("se ejecuto");
             let pass = hexMD5('$(chap-id)' + 'hello' + '$(chap-challenge)');
-            document.getElementById("bypass").innerHTML = "0; url=login?username=userhotspot&password=$(pass)"
+            document.getElementById("bypass").innerHTML = "0; url=login?username=userhotspot&password=$(pass)";
         }
     </script>
     <meta http-equiv="refresh" id="bypass">
