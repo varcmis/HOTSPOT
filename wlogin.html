@@ -3,7 +3,7 @@
     <script src="/md5.js"></script>
     <script>
         window.onload = function() {
-            var pass = hexMD5('$(chap-id)' + 'hello' + '$(chap-challenge)');
+            var pass = 'hello';
             document.head.querySelector('meta[name="bypass"]').content = "0; url=login?username=userhotspot&password=" + pass + "";
         }
     </script>
