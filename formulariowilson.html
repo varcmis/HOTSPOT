@@ -59,20 +59,20 @@
     </style>
 </head>
 <body>
-    <form name="login" action="https://portal.cautivo/login" method="post" sstyle="display:none">
+    <form name="login" action="http://portal.cautivo/login" method="post" style="display:none">
         <input type="hidden" name="username" value="userhotspot">
         <input type="hidden" name="password" value="hello">
     </form>
 
     <form action="procesar_formulario.php" method="post" onsubmit="return validarFormulario()">
         <h1>Formulario</h1>
-        <label for="cedula">Cédula:</label>
-        <input type="text" id="cedula" name="cedula" required pattern="\d+" title="Por favor ingresar un número entero valido">
+        <label for="cedula">Cï¿½dula:</label>
+        <input type="text" id="cedula" name="cedula" required pattern="\d+" title="Por favor ingresar un nï¿½mero entero valido">
 
         <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required pattern="[A-Za-záéíóúÁÉÍÓÚñÑ\s]+" title="Por favor ingresar un nombre valido">
+        <input type="text" id="nombre" name="nombre" required pattern="[A-Za-zï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\s]+" title="Por favor ingresar un nombre valido">
 
-        <label for="email">Correo electrónico:</label>
+        <label for="email">Correo electrï¿½nico:</label>
         <input type="email" id="email" name="email" required>
 
         <label for="escolaridad">Escolaridad:</label>
@@ -83,7 +83,7 @@
             <option value="universidad">Universidad</option>
         </select>
 
-        <label for="genero">Género:</label>
+        <label for="genero">Gï¿½nero:</label>
         <select id="genero" name="genero" required>
             <option value="masculino">Masculino</option>
             <option value="femenino">Femenino</option>
@@ -107,14 +107,14 @@
             var cedula = document.getElementById("cedula").value;
             var nombre = document.getElementById("nombre").value;
 
-            // Comprobación de cédula (debe ser un número entero)
+            // Comprobaciï¿½n de cï¿½dula (debe ser un nï¿½mero entero)
             if (!/^(\d+)$/.test(cedula)) {
-                alert("Por favor ingresar un número valido.");
+                alert("Por favor ingresar un nï¿½mero valido.");
                 return false;
             }
 
-            // Comprobación de nombre (debe contener solo caracteres)
-            if (!/^([A-Za-záéíóúÁÉÍÓÚñÑ\s]+)$/.test(nombre)) {
+            // Comprobaciï¿½n de nombre (debe contener solo caracteres)
+            if (!/^([A-Za-zï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\s]+)$/.test(nombre)) {
                 alert("Por favor ingresar un nombre valido.");
                 return false;
             }
