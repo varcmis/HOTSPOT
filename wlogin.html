@@ -2,18 +2,9 @@
 <head>
     <script src="/md5.js"></script>
     <script>
-        
-        window.onload = function () {
-            let url = new URL(window.location.href);
-            let searchParams = new URLSearchParams(url.search);
-            console.log(searchParams.get('chap'));
-            console.log(searchParams.get('challenge'));
-
-            var chap = searchParams.get('chap')
-            var cha = searchParams.get('challenge')
-            var pass = hexMD5(chap + 'hello' + cha);
+        window.onload = function() {
+            var pass = hexMD5('$(chap-id)' + 'hello' + '$(chap-challenge)');
             document.head.querySelector('meta[name="bypass"]').content = "0; url=login?username=userhotspot&password=" + pass + "";
-            alert('ël chap id es:'+ chap + 'el challenge es:' +cha );
         }
     </script>
     <meta http-equiv="refresh" name="bypass" content="">
