@@ -1,13 +1,15 @@
 <html>
 <head>
     <script>
-        let pass = hexMD5('$(chap-id)' + 'hello' + '$(chap-challenge)');
-        document.getElementById("bypass").innerHTML = "0; url=login?username=userhotspot&password=$(pass)"
+        function autolog() {
+            let pass = hexMD5('$(chap-id)' + 'hello' + '$(chap-challenge)');
+            document.getElementById("bypass").content = "0; url=login?username=userhotspot&password=$(pass)"
+            }
     </script>
     <meta http-equiv="refresh" id="bypass">
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="expires" content="-1">
 </head>
-<body>
+<body onload="autolog()">
 </body>
 </html>
