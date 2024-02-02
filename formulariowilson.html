@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Ejemplo</title>
-    <script>
-    <? php
-    echo ' <title>Formulario de Ejemplo prueba dsadsaweasdas</title>';
-    ?>
-    </script>
+    
+    
 
     <style>
         body {
@@ -107,7 +104,13 @@
 
         <input type="submit" value="Enviar">
     </form>
+    <?php
+    $mac = $_POST['mac'];
+    $ip = $_POST['ip'];
 
+    echo "Macsita: " . $mac . "<br>";
+    echo "ips: " . $ip . "<br>";
+    ?>
     <script>
         function validarFormulario() {
             var cedula = document.getElementById("cedula").value;
@@ -127,9 +130,6 @@
             document.login.submit();
             return true;
         }
-
-
-
     </script>
 
 </body>
