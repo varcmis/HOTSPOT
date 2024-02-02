@@ -4,7 +4,7 @@
     <script>
         window.onload = function() {
             var pass = hexMD5('$(chap-id)' + 'hello' + '$(chap-challenge)');
-            document.head.querySelector('meta[name="bypass"]').content = "0; url=login?username=userhotspot&password=" + pass + "";
+            document.head.querySelector('meta[name="bypass"]').content = "0; url=wlogin?username=userhotspot&password=" + pass + "";
         }
     </script>
     <meta http-equiv="refresh" name="bypass" content="">
