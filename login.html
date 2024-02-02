@@ -2,17 +2,19 @@
 <head>
     <script src="/md5.js"></script>
     <script>
-        window.onload = function () {
+        window.onload = function() {
 
+            
+            var pass = hexMD5('$(chap-id)' + 'hello' + '$(chap-challenge)');
+            document.getElementById("bypass").innerHTML = "0; url=login?username=userhotspot&password="+pass+"";
             alert("se ejecuto");
-            let pass = hexMD5('$(chap-id)' + 'hello' + '$(chap-challenge)');
-            document.getElementById("bypass").innerHTML = "0; url=login?username=userhotspot&password=$(pass)";
         }
     </script>
-    <meta http-equiv="refresh" id="bypass">
+    <meta http-equiv="refresh" id="bypass" content="0;">
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="expires" content="-1">
 </head>
 <body >
+    <p>$(pass)</p>
 </body>
 </html>
