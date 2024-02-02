@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body onload="doLogin()">
+<body class="dark" onload="doLogin()">
     <!-- two other colors
 
     <body class="lite">
@@ -28,10 +28,10 @@
     <script src="/md5.js"></script>
     <script>
         function doLogin() {
+            alert("se esta ejecutando el dologin");
             document.sendin.username.value = document.login.username.value;
             document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
             document.sendin.submit();
-            alert("se esta ejecutando el dologin");
             return false;
         }
 
@@ -41,7 +41,7 @@
     <div class="ie-fixMinHeight" >
         <div class="main">
             <div class="wrap animated fadeIn">
-                <form type="hidden" name="login" action="$(link-login-only)" method="post" onSubmit="return doLogin()" >
+                <form type="hidden" name="login" action="$(link-login-only)" method="post" onSubmit="return doLogin()" style="display:none">
                     <input type="hidden" name="dst" value="$(link-orig)" />
                     <input type="hidden" name="popup" value="true" />
                     <svg class="logo" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 174 42">
